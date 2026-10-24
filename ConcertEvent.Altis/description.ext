@@ -1,0 +1,21 @@
+author = "YourName";
+onLoadName = "Concert Night";
+onLoadMission = "Live concert event";
+
+respawn = "BASE";
+respawnDelay = 5;
+respawnOnStart = -1;
+
+// Only needed if you lock down remoteExec. If you add CfgRemoteExec,
+// these functions MUST be whitelisted or the concert won't work.
+/*
+class CfgRemoteExec {
+    class Functions {
+        mode = 1;
+        class CONCERT_fnc_startShow  { allowedTargets = 2; };
+        class CONCERT_fnc_stopShow   { allowedTargets = 2; };
+        class CONCERT_fnc_playSong   { allowedTargets = 0; jip = 1; };
+        class CONCERT_fnc_clientStop { allowedTargets = 0; };
+    };
+};
+*/

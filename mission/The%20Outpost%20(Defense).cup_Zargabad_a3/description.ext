@@ -1,0 +1,45 @@
+// ============================================================
+//  Last Stand — Zombie Base-Defense  (reusable mission template)
+//  Drop this into ANY map's mission folder. Gameplay logic lives in
+//  @LastStand; tune it in-game via ESC -> Options -> Addon Options ->
+//  "Zombie Defense" (CBA).
+//  In Eden place:  an object named  base_center,  a marker  respawn_west,
+//  playable BLUFOR units, and (optional) heli1 / lz_pad / ambush_* markers.
+// ============================================================
+onLoadName     = "Last Stand";
+onLoadMission  = "The line has fallen. Hold the outpost against the horde.";
+author         = "Ragequit";
+
+// --- Multiplayer respawn (BLUFOR / WEST side) ---
+respawn            = "BASE";   // respawn at a marker named respawn_west
+respawnDelay       = 10;
+respawnOnStart     = -1;
+respawnButton      = 1;
+respawnTemplates[] = {"MenuInventory"};
+
+// --- Radio briefings (place the .ogg files in this mission folder) ---
+class CfgSounds {
+    sounds[] = {};
+    class brief_dropoff {
+        name = "brief_dropoff";
+        sound[] = {"brief_dropoff.ogg", 3.16, 1};
+        titles[] = {};
+    };
+    class brief_travel {
+        name = "brief_travel";
+        sound[] = {"brief_travel.ogg", 3.16, 1};
+        titles[] = {};
+    };
+};
+
+// If your server LOCKS remoteExec via CfgRemoteExec, uncomment and whitelist:
+/*
+class CfgRemoteExec {
+    class Functions {
+        mode = 1;
+        class CONCERT_fnc_defenseStart { allowedTargets = 0; };
+        class CONCERT_fnc_defenseStop  { allowedTargets = 0; };
+        class CONCERT_fnc_ambush       { allowedTargets = 0; };
+    };
+};
+*/

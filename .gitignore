@@ -1,0 +1,7 @@
+# Generated distribution bundle (duplicates @LastStand + the mission .pbo)
+/dist/
+
+# Logs / temp
+*.log
+*.rpt
+*.tmp
