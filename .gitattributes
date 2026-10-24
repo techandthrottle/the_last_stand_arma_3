@@ -1,0 +1,24 @@
+# Normalize line endings: store text as LF, no CRLF-conversion warnings.
+* text=auto eol=lf
+
+# Arma text sources
+*.sqf  text eol=lf
+*.cpp  text eol=lf
+*.hpp  text eol=lf
+*.h    text eol=lf
+*.ext  text eol=lf
+*.txt  text eol=lf
+*.md   text eol=lf
+
+# Binary assets — never convert or diff
+*.pbo  binary
+*.ogv  binary
+*.ogg  binary
+*.wav  binary
+*.wss  binary
+*.paa  binary
+*.p3d  binary
+*.rtm  binary
+*.sqm  binary
+*.bikey     binary
+*.bisign    binary
